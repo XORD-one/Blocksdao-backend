@@ -17,9 +17,9 @@ import { IBlocksDaoSeeder } from "./IBlocksDaoSeeder.sol";
 interface IBlocksDaoDescriptorMinimal {
     // used by BlockDaoToken Contract
 
-    function tokenURI() external view returns (string memory);
+    function tokenURI(uint256 tokenId, IBlocksDaoSeeder.Seed memory seed) external view returns (string memory);
 
-    function dataURI() external view returns (string memory);
+    function dataURI(uint256 tokenId, IBlocksDaoSeeder.Seed memory seed) external view returns (string memory);
 
     // used by BlockDaoSeeder Contract to make use of total count of each attribute and generate random attributes
 
